@@ -28,6 +28,7 @@ sketchfab:
 server:
   servlet:
     context-path: /file
+  port: 6070
 
 feign:
   hystrix:

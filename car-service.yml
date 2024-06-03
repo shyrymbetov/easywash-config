@@ -19,7 +19,8 @@ spring:
 
 server:
   servlet:
-    context-path: /books
+    context-path: /cars
+  port: 3030
 
 feign:
   hystrix:
