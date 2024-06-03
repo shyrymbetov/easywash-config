@@ -1,0 +1,46 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            #            allowedOrigins:
+            #              - "http://localhost:4200"
+            #              - "http://localhost:9753"
+            #              - "http://localhost:5173"
+            allowedOrigins: "http://localhost:5173"
+            allowedHeaders: "*"
+            allowedMethods: "*"
+            allowCredentials: true
+      routes:
+        - id: user_service
+          uri: lb://USER-SERVICE/
+          predicates:
+            - Path=/users/**
+
+        - id: auth_service
+          uri: lb://AUTH-SERVICE/
+          predicates:
+            - Path=/uaa/**
+
+        - id: file_service
+          uri: lb://FILE-SERVICE/
+          predicates:
+            - Path=/file/**
+
+        - id: car_service
+          uri: lb://CAR-SERVICE/
+          predicates:
+            - Path=/cars/**
+
+        - id: mail_service
+          uri: lb://MAIL-SERVICE/
+          predicates:
+            - Path=/mail/**
+
+      discovery:
+        locator:
+          enabled: true
+
+server:
+  port: 4000

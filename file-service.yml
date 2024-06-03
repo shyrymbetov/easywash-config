@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_SERVER}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driverClassName: org.postgresql.Driver
+    platform: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 500MB
+      max-request-size: 500MB
+      location: ${FILE_PATH}
+
+
+sketchfab:
+  token: 95b2ac087c20456e96f01432d30af82b
+
+server:
+  servlet:
+    context-path: /file
+
+feign:
+  hystrix:
+    enabled: true
+
+security:
+  oauth2:
+    client:
+      client-id: file-service
+      client-secret: ${FILE_SERVICE_PASSWORD}
+      access-token-uri: http://auth-service:5001/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
