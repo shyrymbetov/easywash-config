@@ -6,6 +6,11 @@ spring:
           connectiontimeout: 5000
           timeout: 3000
           writetimeout: 5000
+          auth: true
+          ssl:
+            enable: true
+          starttls:
+            enable: true
     debug: true
     default-encoding: UTF-8
 
@@ -28,6 +33,7 @@ spring:
       starttls:
         enable: true
     username: no-reply@mugalim.academy
+
 server:
   servlet:
     context-path: /mail
