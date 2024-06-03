@@ -9,15 +9,15 @@ spring:
     debug: true
     default-encoding: UTF-8
 
-    host: srv-plesk61.ps.kz
-    password: 486o8ozD_
+    host: smtp.mail.ru
+    password: 5qLimVtwQ6XRen5habnS
     port: 465
     protocol: smtps
     smtp:
       auth: true
       starttls:
         enable: true
-    username: no-reply@utools.kz
+    username: no-reply@mugalim.academy
 
 server:
   servlet:
