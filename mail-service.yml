@@ -14,25 +14,25 @@ spring:
     debug: true
     default-encoding: UTF-8
 
-    #    host: smtp.gmail.com
-    #    password: erasyl.ayapbergen
-    #    port: 465
-    #    protocol: smtps
-    #    smtp:
-    #      auth: true
-    #      starttls:
-    #        enable: true
-    #    username: erasylbratan2001@gmail.com
-
-    host: smtp.mail.ru
-    password: 5qLimVtwQ6XRen5habnS
+    host: smtp.gmail.com
+    password: erasyl.ayapbergen
     port: 465
     protocol: smtps
     smtp:
       auth: true
       starttls:
         enable: true
-    username: no-reply@mugalim.academy
+    username: erasylbratan2001@gmail.com
+
+#    host: smtp.mail.ru
+#    password: 5qLimVtwQ6XRen5habnS
+#    port: 465
+#    protocol: smtps
+#    smtp:
+#      auth: true
+#      starttls:
+#        enable: true
+#    username: no-reply@mugalim.academy
 
 server:
   servlet:
