@@ -9,16 +9,25 @@ spring:
     debug: true
     default-encoding: UTF-8
 
-    host: smtp.gmail.com
-    password: erasyl.ayapbergen
+    #    host: smtp.gmail.com
+    #    password: erasyl.ayapbergen
+    #    port: 465
+    #    protocol: smtps
+    #    smtp:
+    #      auth: true
+    #      starttls:
+    #        enable: true
+    #    username: erasylbratan2001@gmail.com
+
+    host: smtp.mail.ru
+    password: 5qLimVtwQ6XRen5habnS
     port: 465
     protocol: smtps
     smtp:
       auth: true
       starttls:
         enable: true
-    username: erasylbratan2001@gmail.com
-
+    username: no-reply@mugalim.academy
 server:
   servlet:
     context-path: /mail
@@ -29,6 +38,6 @@ security:
     client:
       client-id: mail-service
       client-secret: ${MAIL_SERVICE_PASSWORD}
-      access-token-uri: http://auth-service:5001/uaa/oauth/token
+      access-token-uri: http://localhost:5001/uaa/oauth/token
       grant-type: client_credentials
       scope: server
